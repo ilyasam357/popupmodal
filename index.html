@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="pupUp">
+        <h1>Simple PupUp</h1>
+        <button class="show_pupup">Open Modal</button>
+      </div>
+    </header>
+
+    <div class="overlay">
+      <div class="item_modal">
+        <h1>Lorem, ipsum dolor.</h1>
+        <button class="close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+
+    <script>
+      const btnShow = document.querySelector(".show_pupup");
+      const modal = document.querySelector(".overlay");
+      const closeBtn = document.querySelector(".close");
+
+      btnShow.addEventListener("click", function () {
+        modal.classList.add("open-modal");
+      });
+      closeBtn.addEventListener("click", function () {
+        modal.classList.remove("open-modal");
+      });
+    </script>
+  </body>
+</html>
